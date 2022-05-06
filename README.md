@@ -63,8 +63,7 @@ npm start
 ```
 
 ## UNIT TEST
-mock object and database will be used for the unit test
-run npm test at the root level of the deviceapi folder
+Mock object and database will be used for the unit test. Run npm test at the root level of the deviceapi folder
 ```
 npm test
 ```
