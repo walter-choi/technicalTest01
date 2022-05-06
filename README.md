@@ -63,7 +63,11 @@ npm start
 ```
 
 ## UNIT TEST
-Mock object and database will be used for the unit test. Run npm test at the root level of the deviceapi folder
+Unit Test will use below item
+- docker ( for mock object and database )
+- mocha
+- chi
+- chi-http
 ```
 npm test
 ```
