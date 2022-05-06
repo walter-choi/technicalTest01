@@ -63,7 +63,7 @@ npm start
 ```
 
 ## UNIT TEST
-Unit Test will use below item
+Unit test use
 - docker ( for mock object and database )
 - mocha
 - chi
