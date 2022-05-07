@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: device-api-configmap
+data:
+  DB_URI: device-api-db
+  DB_NAME: userapi
+  DB_USERNAME: userapi

@@ -29,7 +29,7 @@ echo "Installing dependency"
 npm install 
 echo "-------------------------------------------"
 echo "Building test environment"
-echo "Please be patient it will take around 30 second to complete"
+echo "Please be patient it will take around 30s to complete"
 docker compose -f ../docker-compose.yml up --detach --always-recreate-deps && echo "Test environment is ready"
 sleep 5
 echo "-------------------------------------------"
@@ -40,4 +40,11 @@ echo "Destroying test environment"
 docker compose down && echo "Test environment destoryed"
 echo "-------------------------------------------"
 echo "Result"
-${unit_test_success:-false} && echo "Unit test success ,progress completed." || echo "Unit test fail, please check and run again"
+if [ ${unit_test_success:-false} ]
+then
+    echo "Unit test success ,progress completed." 
+    exit 0
+else
+    echo "Unit test fail, please check and run again"
+    exit 1
+fi
