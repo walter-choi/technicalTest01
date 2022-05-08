@@ -27,3 +27,15 @@ spec:
                 name: device-api-configmap
             - secretRef:
                 name: device-api-secret
+          startupProbe:
+            httpGet:
+              path: /devices
+              port: apiport
+            failureThreshold: 10
+            periodSeconds: 5
+          livenessProbe:
+            httpGet:
+              path: /devices
+              port: apiport
+            failureThreshold: 1
+            periodSeconds: 5
